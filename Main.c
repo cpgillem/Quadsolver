@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "Quadratic.c"
+#include "Qsolve.c"
 
 int main() {
 	double a, b, c;

@@ -15,18 +15,18 @@ something
 */
 
 #include <math.h>
-#include "MyLog.c";
+#include "MyLog.c"
 
-#define FILENAME "log.txt";
+#define FILENAME "log.txt"
 
 int qsolve(double a, double b, double c, double* x1, double* x2) {
 	//mylog(�gCalled: qsolve, variables passed a = %lf, b = %fl, c = %fl�h, a, b, c);
 	double disc = b * b - 4.0 * a * c; //=B^2 -4ac
 
-									   //validate arguments function log and return 4
+	//validate arguments function log and return 4
 	if(a == INFINITY || b == INFINITY || c == INFINITY ||
-		a == -INFINITY || b == -INFINITY || c == -INFINITY ||
-		a == NAN || b == NAN || c == NAN) {
+			a == -INFINITY || b == -INFINITY || c == -INFINITY ||
+			a == NAN || b == NAN || c == NAN) {
 		//mylog(error); //proper error message invalid input
 		return 4;
 	}
@@ -43,12 +43,12 @@ int qsolve(double a, double b, double c, double* x1, double* x2) {
 		return 2;
 	}
 	else if (disc == 0.0){
-	 //mylog(error); //error about single root
-	 return 1;
+		//mylog(error); //error about single root
+		return 1;
 	}
 
-double rooted = sqrt(disc);
-*x1 = (-b + rooted);
-*x2 = (-b - rooted);
-return 0;
+	double rooted = sqrt(disc);
+	*x1 = (-b + rooted);
+	*x2 = (-b - rooted);
+	return 0;
 }
