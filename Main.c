@@ -1,6 +1,5 @@
 #include <stdio.h>
-
-#include "Qsolve.c"
+#include "Qsolve.h"
 
 int main() {
 	double a, b, c;

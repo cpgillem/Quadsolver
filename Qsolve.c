@@ -14,10 +14,7 @@ How to turn logging off:
 something
 */
 
-#include <math.h>
-#include "MyLog.c"
-
-#define FILENAME "log.txt"
+#include "Qsolve.h"
 
 int qsolve(double a, double b, double c, double* x1, double* x2) {
 	//mylog(�gCalled: qsolve, variables passed a = %lf, b = %fl, c = %fl�h, a, b, c);
