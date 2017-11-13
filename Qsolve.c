@@ -45,7 +45,8 @@ int qsolve(double a, double b, double c, double* x1, double* x2) {
 	}
 
 	double rooted = sqrt(disc);
-	*x1 = (-b + rooted);
-	*x2 = (-b - rooted);
+	*x1 = (-b + rooted) / (2 * a);
+	*x2 = (-b - rooted) / (2 * a);
+
 	return 0;
 }
