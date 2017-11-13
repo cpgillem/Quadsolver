@@ -24,23 +24,22 @@ int qsolve(double a, double b, double c, double* x1, double* x2) {
 	if(a == INFINITY || b == INFINITY || c == INFINITY ||
 			a == -INFINITY || b == -INFINITY || c == -INFINITY ||
 			a == NAN || b == NAN || c == NAN) {
-		//mylog(error); //proper error message invalid input
+		myLog("Inputs are either not numbers, or outside the valid range.");
 		return 4;
 	}
 
 	// quadratic checker
 	if(a == 0.0) {
-		//mylog(error); //Input a proper error message
+		myLog("Not a quadratic equation.");
 		return 3;
 	}
 
 	//checks discriminant
 	if(disc < 0.0) {
-		//mylog(error); //error about imaginary
+		myLog("Imaginary number output.");
 		return 2;
-	}
-	else if (disc == 0.0){
-		//mylog(error); //error about single root
+	} else if (disc == 0.0) {
+		myLog("Only one root.");
 		return 1;
 	}
 
