@@ -1,0 +1,20 @@
+>>> Imaginary number output.
+
+>>> Imaginary number output.
+
+>>> Imaginary number output.
+
+>>> Only one root.
+
+>>> Only one root.
+
+>>> Only one root.
+
+>>> Inputs are either not numbers, or outside the valid range.
+
+>>> Inputs are either not numbers, or outside the valid range.
+
+>>> Not a quadratic equation.
+
+>>> Imaginary number output.
+

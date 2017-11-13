@@ -21,21 +21,19 @@ int qsolve(double a, double b, double c, double* x1, double* x2) {
 	double disc = b * b - 4.0 * a * c; //=B^2 -4ac
 
 	//validate arguments function log and return 4
-	if(a == INFINITY || b == INFINITY || c == INFINITY ||
-			a == -INFINITY || b == -INFINITY || c == -INFINITY ||
-			a == NAN || b == NAN || c == NAN) {
+	if (!isfinite(a) || !isfinite(b) || !isfinite(c)) {
 		myLog("Inputs are either not numbers, or outside the valid range.");
 		return 4;
 	}
 
 	// quadratic checker
-	if(a == 0.0) {
+	if (a == 0.0) {
 		myLog("Not a quadratic equation.");
 		return 3;
 	}
 
 	//checks discriminant
-	if(disc < 0.0) {
+	if (disc < 0.0) {
 		myLog("Imaginary number output.");
 		return 2;
 	} else if (disc == 0.0) {
