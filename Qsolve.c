@@ -17,7 +17,7 @@ something
 #include "Qsolve.h"
 
 int qsolve(double a, double b, double c, double* x1, double* x2) {
-	//mylog(�gCalled: qsolve, variables passed a = %lf, b = %fl, c = %fl�h, a, b, c);
+	//mylog("Called: qsolve, variables passed a = %lf, b = %fl, c = %fl", a, b, c);
 	double disc = b * b - 4.0 * a * c; //=B^2 -4ac
 
 	//validate arguments function log and return 4
