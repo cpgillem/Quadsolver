@@ -5,6 +5,9 @@ FLAGS=-Wall -pedantic -std=c99
 all:
 	gcc ${FLAGS} -o ${OUTPUT} ${SOURCE} -lm
 
+no_log:
+	gcc ${FLAGS} -o ${OUTPUT} ${SOURCE} -lm
+
 test:
 	gcc ${FLAGS} -o ${OUTPUT} ${SOURCE} -lm
 	./${OUTPUT} <test.txt
