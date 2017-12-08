@@ -1,0 +1,29 @@
+Version 2.0
+
+version changes
+version 2.0:
+	seperated validate function from qsolve
+	changed inputs and outputs from doubles to floats
+version 1.5:
+	added MyLog functionality
+version 1.0:
+	first release
+
+How to guide:
+To run program for user input.
+	While terminal is in main folder type "make run"
+
+To run atonomusly:
+	In the main folder of the program is a auto.txt
+	you can replace this with your own auto.txt that has your inputs or
+	you can change the values to the desired input.
+	Leave the 0 0 0 line to designate the end.
+	While terminal is in main folder type "make auto"
+
+To test each function: 
+	Go into the Unit test folder.
+	In terminal type "make "name of cfile"" to maualy test or
+	In terminal type "make a"name of cfile"" to auto test
+
+To clean the run file:
+	While terminal is in main folder type "make clean"

@@ -1,4 +1,4 @@
-SOURCE=Main.c Qsolve.c MyLog.c Qsolve.h MyLog.h
+SOURCE=Main.c Qsolve.c validate.c MyLog.c Qsolve.h MyLog.h validate.h
 OUTPUT=qsolve
 FLAGS=-Wall -pedantic -std=c99
 
@@ -8,9 +8,12 @@ all:
 no_log:
 	gcc ${FLAGS} -o ${OUTPUT} ${SOURCE} -lm
 
-test:
+run:
 	gcc ${FLAGS} -o ${OUTPUT} ${SOURCE} -lm
-	./${OUTPUT} <test.txt
+	./${OUTPUT}
+auto:
+	gcc ${FLAGS} -o ${OUTPUT} ${SOURCE} -lm
+	./${OUTPUT} <auto.txt
 
 clean:
 	rm ${OUTPUT}
