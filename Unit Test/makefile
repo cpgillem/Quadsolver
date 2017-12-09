@@ -1,6 +1,10 @@
 OUTPUT=testing
 FLAGS=-Wall -pedantic -std=c99
 
+unittest:
+	gcc ${FLAGS} -o ${OUTPUT} Unittest.c cunit.c cunit.h Qsolve.h validate.h Qsolve.c validate.c -lm
+	./${OUTPUT}
+
 input:
 	gcc ${FLAGS} -o ${OUTPUT} Input.c
 	./${OUTPUT}

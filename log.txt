@@ -196254,3 +196254,19 @@
 
 >>> Only one root.
 
+>>> Inputs are either not numbers, or outside the valid range.
+
+>>> Not a quadratic equation.
+
+>>> Imaginary number output.
+
+>>> Only one root.
+
+>>> Inputs are either not numbers, or outside the valid range.
+
+>>> Not a quadratic equation.
+
+>>> Imaginary number output.
+
+>>> Only one root.
+

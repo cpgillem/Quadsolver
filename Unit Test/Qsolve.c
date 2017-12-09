@@ -13,28 +13,17 @@ return value:</br>
 How to turn logging off:
 something
 */
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
+
+#include "Qsolve.h"
 #include "validate.h"
 
-int main() {
-	float a, b, c, x1, x2;
-	char bad;
-	do{
-		scanf("%f %f %f%c", &a, &b, &c, &bad);
-		float disc = b * b - 4.0 * a * c; //=B^2 -4ac
-
-		int checker = validate(a, b, c);
-		if (checker == 1 || checker == 0) {
-			float rooted = sqrt(disc);
-			x1 = (-b + rooted) / (2 * a);
-			x2 = (-b - rooted) / (2 * a);
-			printf("a = %f, b = %f, c = %f, X1 = %f, X2 = %f\n", a, b, c, x1, x2);
-		} else {
-			printf("Bad input\n");
-		}
-		
-	}while(a != 0 || b != 0 || c != 0);
-	return 0;
+int qsolve(float a, float b, float c, float* x1, float* x2) {
+	float disc = b * b - 4.0 * a * c; //=B^2 -4ac
+	int checker = validate(a, b, c);
+	if (checker == 1 || checker == 0) {
+		float rooted = sqrt(disc);
+		*x1 = (-b + rooted) / (2 * a);
+		*x2 = (-b - rooted) / (2 * a);
+	}
+	return checker;
 }

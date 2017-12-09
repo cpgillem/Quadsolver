@@ -16,10 +16,9 @@ something
 #include <math.h>
 #include "MyLog.h"
 
-int strValidate(float *a, float *b, float *c){
+int strValidate(char* in, float *a, float *b, float *c){
 	char bad;
-	if(scanf("%f %f %f%c", a, b, c, &bad) != 4){
-		while (getchar() != '\n');
+	if(sscanf(in, "%f %f %f%c", a, b, c, &bad) != 3){
 		return -1;
 	}
 	return 0;

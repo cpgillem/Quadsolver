@@ -10,6 +10,7 @@ Author: Cade Gillem & Bishop	</br></br>
 int main() {
 	float a, b, c;
 	float x1, x2;
+	char* in = malloc(255);
 	int result;
 
 	printf("********************************************************\n");
@@ -18,10 +19,14 @@ int main() {
 
 	do{
 		// Receive input.
-		printf("Enter a, b, and c, or 0 for all to quit: \n");
-		while (strValidate(&a, &b, &c) != 0){
-			printf("Bad input, input only float numbers\n");
-		}
+		do{ 
+			printf("Enter a, b, and c, or 0 for all to quit: \n");
+			scanf("%[^\n]%*c", in);
+			result = strValidate(in, &a, &b, &c);
+			if (result != 0){
+				printf("Bad input, input only float numbers\n");
+			}
+		}while (result != 0);
 		if((a != 0 || b != 0 || c != 0)) {
 			// Calculate the roots of the quadratic equation.
 			result = qsolve(a, b, c, &x1, &x2);
